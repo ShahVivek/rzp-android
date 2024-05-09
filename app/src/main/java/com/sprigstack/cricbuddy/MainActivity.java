@@ -30,9 +30,6 @@ public class MainActivity extends AppCompatActivity {
 
         assert myWebView != null;
         myWebView.addJavascriptInterface(new PaymentInterface(), "PaymentInterface");
-        String html = "<html><script> var options = {callback_url: https://rzp-fe.onrender.com/',redirect: true}</script></html>";
-        myWebView.loadDataWithBaseURL("https://rzp-fe.onrender.com/",html , "text/html", "utf-8", null);
-
         WebView.setWebContentsDebuggingEnabled(true);
         WebSettings webSettings=myWebView.getSettings();
         webSettings.setJavaScriptEnabled(true);
