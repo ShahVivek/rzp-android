@@ -39,6 +39,16 @@ public class MainActivity extends AppCompatActivity {
         webSettings.setSupportMultipleWindows(true);
         webSettings.setJavaScriptCanOpenWindowsAutomatically(true);
         webSettings.setMixedContentMode(WebSettings.MIXED_CONTENT_ALWAYS_ALLOW);
+        String html = "<html><script>"
+                + "var options = {"
+                + "'key': 'rzp_live_oQjEDMyUkDJRzj', "
+                + "'callback_url': 'https://eneqd3r9zrjok.x.pipedream.net', "
+                + "'redirect': true, "
+                + "'webview_intent': true, "
+                + "};"
+                + "</script></html>";
+        myWebView.loadDataWithBaseURL("https://rzp-fe.onrender.com/", html, "text/html", "utf-8", null);
+//        myWebView.loadData(html, "text/html", null);
         myWebView.loadUrl("https://rzp-fe.onrender.com/");
         myWebView.setWebViewClient(new MyWebViewClient(MainActivity.this));
     }
