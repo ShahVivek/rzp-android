@@ -46,6 +46,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".RazorpayActivity"
+            android:label="Razorpay Activity">
+        </activity>s
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="com.sprigstack.cricbuddy.provider"
